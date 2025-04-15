@@ -1,78 +1,76 @@
 <div class="row">
   <div class="col-lg-3 col-md-2 col-sm-12"></div>
   <div class="col-lg-6 col-md-8 col-sm-12">
-      <div class="card">
-          <div class="main-card-body card-body">
-              <div class="row mb-4">
-                  <div class="col-3"><i class="bi bi-chevron-left"></i></div>
-                  <div class="col-6 m-auto">
-                      <h6>Loan Calculator</h6>
-                  </div>
-                  <div class="col-auto"><i class="bi bi-three-dots-vertical"></i></div>
-              </div>
-              <div class="card shadow-box">
-                  <div class="card-body">
-                      <p class="text-center">Maximum Funding</p>
-                      <h1 class="text-center">Rp 17.484.500</h1>
-                      <hr>
-                      <div class="row mt-2">
-                          <div class="col">
-                              <h6>Honda ADV 150 CBS</h6>
-                              <p>2022</p>
-                          </div>
-                          <div class="col-auto m-auto"><i class="bi bi-sliders2-vertical"></i>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="card mt-4">
-                  <div class="card-body">
-                      <p>Loan Amount</p>
-                      <h6 class="mt-1 mb-4">{{'Rp '+loanAmount}}</h6>
-                      <p-slider [(ngModel)]="loanAmount" required="1000000" step="10000" [min]="1000000" [max]="17480000"
-                          (onSlideEnd)="monthlyEmi()">
-                      </p-slider>
-                      <div class="row mt-2">
-                          <div class="col">
-                              <p>{{loanAmount}}</p>
-                          </div>
-                          <div class="col-auto">
-                              <p>17.480.000</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="card mt-4 mb-4">
-                  <div class="card-body">
-                      <p>Loan Period</p>
-                      <h6 class="mt-1 mb-4">{{ loanPeriod + ' Months' }}</h6>
-                      <p-slider [(ngModel)]="loanPeriod" required="3" step="3" [min]="0" [max]="18" (onSlideEnd)="monthlyEmi()">
-                      </p-slider>
-
-                      <div class="row mt-2">
-                          <div class="col">
-                              <p>{{loanPeriod + ' Months'}}</p>
-                          </div>
-                          <div class="col-auto">
-                              <p>18 Months</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+    <div class="card">
+      <div class="main-card-body card-body">
+        <div class="row mb-4">
+          <div class="col-3"><i class="bi bi-chevron-left"></i></div>
+          <div class="col-6 m-auto">
+            <h6>Loan Calculator</h6>
           </div>
-
-          <div class="card-footer">
-              <div class="mt-4">
-                  <p>Estimated monthly installments</p>
-                  <h1>Rp {{ monthlyInstallments }}</h1>
-                  <p>Installment fees may change according to the results of verification
-                      of the physical condition of the vehicle of the branch office.</p>
+          <div class="col-auto"><i class="bi bi-three-dots-vertical"></i></div>
+        </div>
+        <div class="card shadow-box">
+          <div class="card-body">
+            <p class="text-center">Maximum Funding</p>
+            <h2 class="text-center">Rp 17.484.500</h2>
+            <hr>
+            <div class="row">
+              <div class="col">
+                <h6>Honda ADV 150 CBS</h6>
+                <p>2022</p>
               </div>
-              <button (click)="applyLoan()" class="btn btn-info btn-lg mb-4">APPLY LOAN</button>
+              <div class="col-auto m-auto"><i class="bi bi-sliders2-vertical"></i>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div class="card mt-4">
+          <div class="card-body">
+            <p>Loan Amount</p>
+            <h6 class="mt-1 mb-4">{{'Rp '+loanAmount}}</h6>
+            <p-slider [(ngModel)]="loanAmount" required="1000000" step="10000" [min]="1000000" [max]="17480000"
+              (onSlideEnd)="monthlyEmi()">
+            </p-slider>
+            <div class="row mt-2">
+              <div class="col">
+                <p>{{loanAmount}}</p>
+              </div>
+              <div class="col-auto">
+                <p>17.480.000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-4 mb-4">
+          <div class="card-body">
+            <p>Loan Period</p>
+            <h6 class="mt-1 mb-4">{{ loanPeriod + ' Months' }}</h6>
+            <p-slider [(ngModel)]="loanPeriod" required="3" step="3" [min]="0" [max]="18" (onSlideEnd)="monthlyEmi()">
+            </p-slider>
+
+            <div class="row mt-2">
+              <div class="col">
+                <p>{{loanPeriod + ' Months'}}</p>
+              </div>
+              <div class="col-auto">
+                <p>18 Months</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div class="card-footer">
+        <p>Estimated monthly installments</p>
+        <h2>Rp {{ monthlyInstallments }}</h2>
+        <p>Installment fees may change according to the results of verification
+          of the physical condition of the vehicle of the branch office.</p>
+        <button (click)="applyLoan()" class="btn btn-info btn-lg mb-4">APPLY LOAN</button>
+      </div>
+    </div>
   </div>
   <div class="col-lg-3 col-md-2 col-sm-12"></div>
 </div>
