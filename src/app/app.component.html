@@ -26,10 +26,10 @@
                   </div>
               </div>
 
-              <div class="card shadow-box mt-4">
+              <div class="card mt-4">
                   <div class="card-body">
                       <p>Loan Amount</p>
-                      <h6 class="mt-1 mb-4">Rp 14,500,000</h6>
+                      <h6 class="mt-1 mb-4">{{'Rp '+loanAmount}}</h6>
                       <p-slider [(ngModel)]="loanAmount" [min]="1000000" [max]="17480000"
                           (onSlideEnd)="calculateInstallments()">
                       </p-slider>
@@ -38,16 +38,16 @@
                               <p>{{loanAmount}}</p>
                           </div>
                           <div class="col-auto">
-                              <p>17,400,000</p>
+                              <p>17.480.000</p>
                           </div>
                       </div>
                   </div>
               </div>
 
-              <div class="card shadow-box mt-4 mb-4">
+              <div class="card mt-4 mb-4">
                   <div class="card-body">
                       <p>Loan Period</p>
-                      <h6 class="mt-1 mb-4">12 Months</h6>
+                      <h6 class="mt-1 mb-4">{{ loanPeriod + ' Months' }}</h6>
                       <p-slider [(ngModel)]="loanPeriod" [min]="0" [max]="18" (onSlideEnd)="calculateInstallments()">
                       </p-slider>
 
