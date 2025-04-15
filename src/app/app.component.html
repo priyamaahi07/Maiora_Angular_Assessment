@@ -30,8 +30,8 @@
                   <div class="card-body">
                       <p>Loan Amount</p>
                       <h6 class="mt-1 mb-4">{{'Rp '+loanAmount}}</h6>
-                      <p-slider [(ngModel)]="loanAmount" [min]="1000000" [max]="17480000"
-                          (onSlideEnd)="calculateInstallments()">
+                      <p-slider [(ngModel)]="loanAmount" required="1000000" step="10000" [min]="1000000" [max]="17480000"
+                          (onSlideEnd)="monthlyEmi()">
                       </p-slider>
                       <div class="row mt-2">
                           <div class="col">
@@ -48,7 +48,7 @@
                   <div class="card-body">
                       <p>Loan Period</p>
                       <h6 class="mt-1 mb-4">{{ loanPeriod + ' Months' }}</h6>
-                      <p-slider [(ngModel)]="loanPeriod" [min]="0" [max]="18" (onSlideEnd)="calculateInstallments()">
+                      <p-slider [(ngModel)]="loanPeriod" required="3" step="3" [min]="0" [max]="18" (onSlideEnd)="monthlyEmi()">
                       </p-slider>
 
                       <div class="row mt-2">
@@ -70,7 +70,7 @@
                   <p>Installment fees may change according to the results of verification
                       of the physical condition of the vehicle of the branch office.</p>
               </div>
-              <button (click)="applyLoan()" class="btn btn-primary btn-lg">APPLY LOAN</button>
+              <button (click)="applyLoan()" class="btn btn-info btn-lg mb-4">APPLY LOAN</button>
           </div>
       </div>
   </div>

@@ -1,26 +1,32 @@
-.card{
+.card {
     border: transparent !important;
     padding: 0px !important;
 }
-.shadow-box{
+
+.shadow-box:hover {
     box-shadow: 0px 0px 10px -2px rgba(0, 255, 255, 0.639) !important;
 }
-.card-body, .card-footer{
+
+.card-body,
+.card-footer {
     background-color: #383a4f !important;
 }
 
-.main-card-body{
+.main-card-body {
     background-color: #40455b !important;
 }
 
-p{
+p {
     color: rgb(184, 176, 176);
 }
 
-h1,h6, hr, i{
+h1,
+h6,
+hr,
+i {
     color: #e5e9eb;
 }
 
-button{
+button {
     width: 100%;
 }
