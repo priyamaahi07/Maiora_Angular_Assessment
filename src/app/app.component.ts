@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { SliderModule } from 'primeng/slider'
 @Component({
   selector: 'app-root',
@@ -16,12 +16,13 @@ export class AppComponent implements OnInit {
   loanPeriod: number = 6;
   monthlyInstallments: number = 0;
 
-  constructor() {
+  constructor(private _router: Router) {
 
   }
 
   ngOnInit(): void {
-    this.monthlyEmi();
+    // this._router.navigate(['a']);
+    // this.monthlyEmi();
   }
 
   monthlyEmi() {
