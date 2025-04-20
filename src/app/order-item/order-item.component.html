@@ -1,14 +1,18 @@
 <div class="row">
-    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <h3>Sum of the numnbers : {{sum}}</h3>
+    </div>
     <div class="col-lg-4 col-sm-12">
         <div class="card">
             <div class="card-body">
                 <div class="row mt-4 mb-4 w-100">
-                    <div class="col-2"><i class="bi bi-arrow-left" style="font-size: 24px;"></i></div>
+                    <div class="col-2"><i class="bi bi-arrow-left f-24"></i></div>
                     <div class="col-8 text-center">
                         <h3>Burgers</h3>
                     </div>
-                    <div class="col-2"><i class="bi bi-cart" style="font-size: 24px;"></i></div>
+                    <div class="col-2">
+                        <i class="bi bi-cart f-24"></i>
+                    </div>
                 </div>
                 <div class="row mb-4 w-100 text-center">
                     <div class="col menu-items text-danger"><u>All Items</u></div>
@@ -38,21 +42,21 @@
                         <h3>{{itemName}}</h3>
                     </div>
                     <div class="col-4 text-center">
-                        <i class="bi bi-heart" style="color: red; font-size: 24px;"></i>
+                        <i class="bi bi-heart"></i>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-7">
-                        <p style="font-size: 12px;">Ham, Cheddar cheese, Onion, Cornichon, Salad, Tomato</p>
+                        <p>Ham, Cheddar cheese, Onion, Cornichon, Salad, Tomato</p>
                     </div>
                 </div>
                 <h3 class="mt-2">{{'$'+amount}}</h3>
                 <div class="row text-center mt-4">
-                    <div class="col-4 m-auto" style="background-color: lightgrey; border-radius: 10px; width: 120px;">
+                    <div class="col-4 m-auto three-btn">
                         <div class="d-flex">
-                            <button class="btn btn-secondary" style="color: black;" (click)="removeItem()" [disabled]="qty ==0">-</button>
+                            <button class="btn btn-secondary clr-blck" (click)="removeItem()" [disabled]="qty ==0">-</button>
                             <span class="m-auto text-center ">{{qty}}</span>
-                            <button class="btn btn-secondary" style="color: black;" (click)="addItem()">+</button>
+                            <button class="btn btn-secondary clr-blck" (click)="addItem()">+</button>
                         </div>
                     </div>
                     <div class="col m-auto text-end">
